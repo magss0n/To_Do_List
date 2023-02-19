@@ -1,3 +1,4 @@
+#To Do List
 -This is a simple TO DO list.
 
 -All you need is to enter the tasks to be performed and later on, input the the tasks you've completed.
