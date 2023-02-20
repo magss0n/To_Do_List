@@ -1,6 +1,6 @@
 
 def to_do(chores):
-    """This fxn has to print the chores to be done"""
+    """This fxn has to print the chore`s to be done"""
     print("\nYour goal is to complete the following before the end of the day:")
     for chore in chores:
         print(f"\t-{chore}")
@@ -11,11 +11,9 @@ def uncompleted(jobs_done, chores):
     """This fxn compares the list of chores done and not done and
     displays the uncompleted ones"""
     for chore in chores:
+        chore = chore.capitalize()
         if chore not in jobs_done:
             print(f"\t~{chore.title()} is left")
-
-        elif chore in jobs_done:
-            continue
 
 
 def main():
@@ -25,7 +23,7 @@ def main():
     list_length = int(input("How many tasks do you have to complete today?\n"))
     for i in range(list_length):
         task = input(f"Please, Enter Task {i + 1}: ")
-        tasks.append(task)
+        tasks.append(task.capitalize())
 
     to_do(tasks)  # To display the different tasks to be done
 
@@ -42,7 +40,7 @@ def main():
 
         for i in range(number_done):
             task_done = input("Enter task done: ")
-            tasks_done.append(task_done)
+            tasks_done.append(task_done.capitalize())
 
         # To compare and display the tasks left
         if number_done == list_length:
@@ -57,6 +55,7 @@ def main():
             print("\nNicely done but:")
             uncompleted(tasks_done, tasks)
             print("KEEP PUSHING!!")
+            tasks_done.clear()
 
 
 main()
